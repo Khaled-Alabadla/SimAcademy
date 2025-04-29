@@ -10,13 +10,13 @@
                         <h1 class="display-6 mb-3"><i class="bi bi-journal-medical"></i> Change Password</h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="{{route('dashboard">Home</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Change Password</li>
                             </ol>
                         </nav>
                         @include('session-messages')
                         <div class="col-6 border p-3 shadow-sm">
-                            <form action="{{route('password.update" method="POST">
+                            <form action="{{ route('password.update') }}" method="POST">
                                 @csrf
                                 <div class="mb-3">
                                     <label for="old-password" class="form-label">Old Password</label>

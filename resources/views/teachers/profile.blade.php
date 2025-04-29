@@ -19,8 +19,8 @@
                         </h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
-                                <li class="breadcrumb-item"><a href="{{ route('teacher.list') }}">Teacher List</a></li>
+                                <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Home</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('teacher.list">Teacher List</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Profile</li>
                             </ol>
                         </nav>

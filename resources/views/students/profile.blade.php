@@ -3,10 +3,10 @@
 @section('content')
     <style>
         /* .table th:first-child,
-        .table td:first-child {
-          position: relative;
-          background-color: #f8f9fa;
-        } */
+                .table td:first-child {
+                  position: relative;
+                  background-color: #f8f9fa;
+                } */
     </style>
     <div class="container">
         <div class="row justify-content-start">

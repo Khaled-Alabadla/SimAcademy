@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <link rel="stylesheet" href="/css/fullcalendar5.9.0.min.css') }}">
-    <script src="/js/fullcalendar5.9.0.main.min.js') }}"></script>
+    <link rel="stylesheet" href="/css/fullcalendar5.9.0.min.css">
+    <script src="/js/fullcalendar5.9.0.main.min.js"></script>
     <div class="container">
         <div class="row justify-content-start">
             @include('layouts.left-menu')

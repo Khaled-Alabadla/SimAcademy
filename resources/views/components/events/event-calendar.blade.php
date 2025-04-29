@@ -10,7 +10,7 @@
 <script>
     // A modified version of codes from
     // https://www.positronx.io/create-events-in-laravel-using-fullcalendar-and-jquery-ajax/
-    $(document).ready(function () {
+    $(document).ready(function() {
 
         var SITEURL = "{{ url('/') }}";
 
@@ -26,16 +26,16 @@
                 center: 'title',
                 right: 'month,agendaWeek,agendaDay'
             },
-            height: {{($editable == 'true')?500:"parent"}},
+            height: {{ $editable == 'true' ? 500 : 'parent' }},
             groupByResource: true,
             defaultView: 'month',
-            editable: {{$editable}},
+            editable: {{ $editable }},
             eventLimit: true, // when too many events in a day, show the popover
             events: SITEURL + '/calendar-event',
             displayEventTime: true,
-            selectable: {{$selectable}},
-            selectHelper: {{$selectable}},
-            select: function (event_start, event_end) {
+            selectable: {{ $selectable }},
+            selectHelper: {{ $selectable }},
+            select: function(event_start, event_end) {
                 var event_name = prompt("Event Name:");
                 if (event_name) {
                     var event_start = $.fullCalendar.formatDate(event_start, "Y-MM-DD HH:mm:ss");
@@ -49,7 +49,7 @@
                             type: 'create'
                         },
                         type: "POST",
-                        success: function (data) {
+                        success: function(data) {
                             displayMessage("Event created.");
 
                             calendar.fullCalendar('renderEvent', {
@@ -63,7 +63,7 @@
                     });
                 }
             },
-            eventResize: function (event, delta) {
+            eventResize: function(event, delta) {
                 var event_start = $.fullCalendar.formatDate(event.start, "Y-MM-DD");
                 var event_end = $.fullCalendar.formatDate(event.end, "Y-MM-DD");
 
@@ -77,13 +77,13 @@
                         type: 'edit'
                     },
                     type: "POST",
-                    success: function (response) {
+                    success: function(response) {
                         displayMessage("Event updated");
                     }
                 });
             },
-            eventClick: function (event) {
-                if({{$selectable}}){
+            eventClick: function(event) {
+                if ({{ $selectable }}) {
                     var eventDelete = confirm("Are you sure to delete?");
                     if (eventDelete) {
                         $.ajax({
@@ -93,7 +93,7 @@
                                 id: event.id,
                                 type: 'delete'
                             },
-                            success: function (response) {
+                            success: function(response) {
                                 calendar.fullCalendar('removeEvents', event.id);
                                 displayMessage("Event removed");
                             }
@@ -105,7 +105,6 @@
     });
 
     function displayMessage(message) {
-        toastr.success(message, 'Event');            
+        toastr.success(message, 'Event');
     }
-
 </script>

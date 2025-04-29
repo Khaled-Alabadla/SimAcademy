@@ -48,7 +48,7 @@
                         <input type="checkbox" id="remember" name="remember" />
                         <label for="remember">Remember me</label>
                     </div>
-                    {{-- <a href="{{ route('password.request') }}" class="forgot-password">هل نسيت كلمة المرور؟</a> --}}
+                    {{-- <a href="{{ route('password.request" class="forgot-password">هل نسيت كلمة المرور؟</a> --}}
                 </div>
 
                 <button type="submit" class="login-button">Login</button>
@@ -58,10 +58,10 @@
         </div>
 
         <div class="illustration-section">
-            <img src="/assets/img/login.png') }}" alt="صورة توضيحية" class="illustration-image" />
+            <img src="/assets/img/login.png" alt="صورة توضيحية" class="illustration-image" />
         </div>
     </div>
-    <script src="/assets/js/bootstrap.min.js') }}"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
 </body>
 
 </html>

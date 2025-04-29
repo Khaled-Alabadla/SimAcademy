@@ -32,7 +32,7 @@
                                                 <td>{{ $assignment->assignment_name }}</td>
                                                 <td>
                                                     <div class="btn-group" role="group">
-                                                        <a href="/storage/'.$assignment->assignment_file_path)}}"
+                                                        <a href="{{ 'storage/' . $assignment->assignment_file_path }}"
                                                             role="button" class="btn btn-sm btn-outline-primary"><i
                                                                 class="bi bi-download"></i> Download</a>
                                                     </div>

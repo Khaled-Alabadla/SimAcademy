@@ -3,12 +3,14 @@
 namespace App\Providers;
 
 use App\Interfaces\AcademicSettingInterface;
+use App\Interfaces\CourseInterface;
 use App\Interfaces\SchoolClassInterface;
 use App\Interfaces\SchoolSessionInterface;
 use App\Interfaces\SectionInterface;
 use App\Interfaces\SemesterInterface;
 use App\Interfaces\UserInterface;
 use App\Repositories\AcademicSettingRepository;
+use App\Repositories\CourseRepository;
 use App\Repositories\SchoolClassRepository;
 use App\Repositories\SchoolSessionRepository;
 use App\Repositories\SectionRepository;
@@ -29,6 +31,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(SectionInterface::class, SectionRepository::class);
         $this->app->bind(SemesterInterface::class, SemesterRepository::class);
         $this->app->bind(SchoolClassInterface::class, SchoolClassRepository::class);
+        $this->app->bind(CourseInterface::class, CourseRepository::class);
     }
 
     /**

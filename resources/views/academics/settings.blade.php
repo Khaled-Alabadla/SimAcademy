@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <script src="/js/masonry.pkgd.min.js') }}"></script>
+    <script src="/js/masonry.pkgd.min.js"></script>
     <div class="container">
         <div class="row justify-content-start">
             @include('layouts.left-menu')
@@ -103,7 +103,7 @@
                                                 <small><i class="bi bi-exclamation-diamond-fill me-2"></i> Do not change the
                                                     type in the middle of a Semester.</small>
                                             </p>
-                                            <form action="{{ route('attatndence.update') }}" method="POST">
+                                            <form action="{{ route('attatndence.update') }} " method="POST">
                                                 @csrf
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="radio" name="attendance_type"
@@ -177,7 +177,7 @@
                                     <div class="col-md-4 mb-4">
                                         <div class="p-3 border bg-light shadow-sm">
                                             <h6>Create Course</h6>
-                                            <form action="{{ route('course.store') }}" method="POST">
+                                            <form action="{{ route('course.store') }} " method="POST">
                                                 @csrf
                                                 <input type="hidden" name="session_id"
                                                     value="{{ $current_school_session_id }}">
@@ -348,7 +348,9 @@
         $(document).ready(function() {
             $('#inputAssignToClass').change(function() {
                 var classId = $(this).val();
-                var url = '{{ route('get.sections.courses.by.classId', 'classId') }}';
+                var url = '{{ route('
+                get.sections.courses.by.classId ','
+                classId ';
                 url = url.replace('classId', classId);
                 $.ajax({
                     url: url,
