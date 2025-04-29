@@ -13,13 +13,13 @@
                     @include('session-messages')
                     <h5><i class="bi bi-diagram-2"></i> Class {{$class_name}}, Section #{{$section_name}}</h5>
                     <h5><i class="bi bi-compass"></i> Course: {{$course_name}}</h5>
-                    <form action="{{route('course.final.mark.submit.store')}}" method="POST">
+                    <form action="{{route('course.final.mark.submit.store" method="POST">
                         @csrf
                         <input type="hidden" name="session_id" value="{{$current_school_session_id}}">
                         <div class="row mt-3">
                             <div class="col">
                                 <div class="table-responsive">
-                                    
+
                                     <table class="table table-hover">
                                         <thead>
                                             <tr>
@@ -56,7 +56,7 @@
                                     </table>
                                 </div>
                             </div>
-                            
+
                         </div>
                         <div class="col-3">
                             <button type="submit" class="btn btn-outline-primary"><i class="bi bi-check2"></i> Save</button>

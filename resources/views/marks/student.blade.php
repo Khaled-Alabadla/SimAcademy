@@ -12,7 +12,7 @@
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{route('dashboard">Home</a></li>
                             <li class="breadcrumb-item"><a href="{{url()->previous()}}">My Courses</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Course Marks</li>
                         </ol>
@@ -53,8 +53,8 @@
                                     @foreach ($final_marks as $mark)
                                     <tr>
                                         <td>{{$mark->final_marks}}</td>
-                                        <td>{{$mark->getAttribute('point')}}</td>
-                                        <td>{{$mark->getAttribute('grade')}}</td>
+                                        <td>{{$mark->getAttribute('point</td>
+                                        <td>{{$mark->getAttribute('grade</td>
                                     </tr>
                                     @endforeach
                                 @endisset

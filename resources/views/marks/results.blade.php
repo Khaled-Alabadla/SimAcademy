@@ -12,7 +12,7 @@
                     </h1>
                     <h6>Filter list by:</h6>
                     <div class="mb-4 mt-4">
-                        <form action="{{route('course.mark.list.show')}}" method="GET">
+                        <form action="{{route('course.mark.list.show" method="GET">
                             <div class="row">
                                 <div class="col">
                                     <select class="form-select" name="semester_id" required>
@@ -64,8 +64,8 @@
                                             <td><i class="bi bi-person-square"></i></td>
                                             <td>{{$mark->student->first_name}} {{$mark->student->last_name}}</td>
                                             <td>{{$mark->final_marks}}</td>
-                                            <td>{{$mark->getAttribute('point')}}</td>
-                                            <td>{{$mark->getAttribute('grade')}}</td>
+                                            <td>{{$mark->getAttribute('point</td>
+                                            <td>{{$mark->getAttribute('grade</td>
                                         </tr>
                                         @endforeach
                                     @endisset
@@ -83,7 +83,7 @@
     function getSectionsAndCourses(obj) {
         var class_id = obj.options[obj.selectedIndex].value;
 
-        var url = "{{route('get.sections.courses.by.classId')}}?class_id=" + class_id 
+        var url = "{{route('get.sections.courses.by.classId?class_id=" + class_id
 
         fetch(url)
         .then((resp) => resp.json())

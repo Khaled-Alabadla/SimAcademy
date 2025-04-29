@@ -15,7 +15,7 @@
                         <small><i class="bi bi-exclamation-diamond-fill me-2"></i> Students must be promoted only once to a new Session. Ususally, Admin will create a New Session once Academic activity ends for the Current Session.</small>
                     </p>
                     <div class="mb-4 mt-4">
-                        <form action="{{route('promotions.store')}}" method="POST">
+                        <form action="{{route('promotions.store" method="POST">
                             @csrf
                             <table class="table mt-4">
                                 <thead>
@@ -72,7 +72,7 @@
     function getSections(obj, index) {
         var class_id = obj.options[obj.selectedIndex].value;
 
-        var url = "{{route('get.sections.courses.by.classId')}}?class_id=" + class_id 
+        var url = "{{route('get.sections.courses.by.classId?class_id=" + class_id
 
         fetch(url)
         .then((resp) => resp.json())

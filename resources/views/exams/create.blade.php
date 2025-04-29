@@ -10,7 +10,7 @@
                     <h1 class="display-6 mb-3"><i class="bi bi-file-plus"></i> Create Exam</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{route('dashboard">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Create Exam</li>
                         </ol>
                     </nav>
@@ -18,7 +18,7 @@
                     <div class="row">
                         <div class="col-md-5 mb-4">
                             <div class="p-3 border bg-light shadow-sm">
-                                <form action="{{route('exam.store')}}" method="POST">
+                                <form action="{{route('exam.store" method="POST">
                                     @csrf
                                     <input type="hidden" name="session_id" value="{{$current_school_session_id}}">
                                     <div>
@@ -72,11 +72,11 @@
     </div>
 </div>
 <script>
-    
+
     $(document).ready(function(){
         $('#getcoursebyclass').change(function(){
-            var classId = $(this).val(); 
-            var url = '{{ route("get.sections.courses.by.classId", "classId") }}'; 
+            var classId = $(this).val();
+            var url = '{{ route("get.sections.courses.by.classId", "classId") }}';
             url = url.replace('classId', classId);
             $.ajax({
                 url:url ,
@@ -85,16 +85,16 @@
                 success: function (response) {
                     if(response.courses){
                         var sectionsDropdown = $('#course-select');
-                        sectionsDropdown.empty(); 
+                        sectionsDropdown.empty();
                         sectionsDropdown.append($('<option>').text('Please select a course').attr('value', 0))
                         response.courses.forEach(function(course) {
                             sectionsDropdown.append($('<option>').text(course.course_name).attr('value', course.id));
                         });
                     }
                 }
-            })            
+            })
         })
     });
-    
+
 </script>
 @endsection

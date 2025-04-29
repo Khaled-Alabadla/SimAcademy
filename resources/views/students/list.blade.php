@@ -12,14 +12,14 @@
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{route('dashboard">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Student List</li>
                         </ol>
                     </nav>
                     @include('session-messages')
                     <h6>Filter list by:</h6>
                     <div class="mb-4 mt-4">
-                        <form class="row" action="{{route('student.list')}}" method="GET">
+                        <form class="row" action="{{route('student.list" method="GET">
                             <div class="col">
                                 <select onchange="getSections(this);" class="form-select" aria-label="Class" name="class_id" required>
                                     @isset($school_classes)
@@ -32,7 +32,7 @@
                             </div>
                             <div class="col">
                                 <select class="form-select" id="section-select" aria-label="Section" name="section_id" required>
-                                    <option value="{{request()->query('section_id')}}">{{request()->query('section_name')}}</option>
+                                    <option value="{{request()->query('section_id">{{request()->query('section_name</option>
                                 </select>
                             </div>
                             <div class="col">
@@ -99,7 +99,7 @@
     function getSections(obj) {
         var class_id = obj.options[obj.selectedIndex].value;
 
-        
+
 
         fetch(url)
         .then((resp) => resp.json())

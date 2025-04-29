@@ -10,8 +10,8 @@
                     <h1 class="display-6 mb-3"><i class="bi bi-file-plus"></i> Add Exam Rule</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Home</a></li>
-                            <li class="breadcrumb-item"><a href="{{route('exam.list')}}">Exams</a></li>
+                            <li class="breadcrumb-item"><a href="{{route('dashboard">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{route('exam.list">Exams</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Add Exam Rule</li>
                         </ol>
                     </nav>
@@ -19,7 +19,7 @@
                     <div class="row">
                         <div class="col-5 mb-4">
                             <div class="p-3 border bg-light shadow-sm">
-                                <form action="{{route('exam.rule.store')}}" method="POST">
+                                <form action="{{route('exam.rule.store" method="POST">
                                     @csrf
                                     <input type="hidden" name="exam_id" value="{{$exam_id}}">
                                     <input type="hidden" name="session_id" value="{{$current_school_session_id}}">

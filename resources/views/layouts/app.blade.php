@@ -10,24 +10,24 @@
 
     <title>SimAcademy</title>
 
-    <link rel="shortcut icon" href="{{ asset('favicon_io/favicon.ico') }}">
-    <link rel="shortcut icon" sizes="16x16" href="{{ asset('favicon_io/favicon-16x16.png') }}">
-    <link rel="shortcut icon" sizes="32x32" href="{{ asset('favicon_io/favicon-32x32.png') }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('SimAcademy/logo.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('SimAcademy/logo.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('SimAcademy/logo.png') }}">
+    <link rel="shortcut icon" href="/favicon_io/favicon.ico') }}">
+    <link rel="shortcut icon" sizes="16x16" href="/favicon_io/favicon-16x16.png') }}">
+    <link rel="shortcut icon" sizes="32x32" href="/favicon_io/favicon-32x32.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="/SimAcademy/logo.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="/SimAcademy/logo.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="/SimAcademy/logo.png') }}">
 
     <!-- Scripts -->
-    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-    <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
+    <script src="/js/bootstrap.bundle.min.js') }}"></script>
+    <!-- <script src="/js/app.js') }}" defer></script> -->
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
+    <script src="/js/jquery-3.6.0.min.js') }}"></script>
 
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="/css/app.css') }}" rel="stylesheet">
 </head>
 
 <body>

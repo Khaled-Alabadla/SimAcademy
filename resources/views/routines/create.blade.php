@@ -10,7 +10,7 @@
                     <h1 class="display-6 mb-3"><i class="bi bi-plus"></i> Create Routine</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{route('dashboard">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Create Routine</li>
                         </ol>
                     </nav>
@@ -18,7 +18,7 @@
                     <div class="row">
                         <div class="col-md-5 mb-4">
                             <div class="p-3 border bg-light shadow-sm">
-                                <form action="{{route('routine.store')}}" method="POST">
+                                <form action="{{route('routine.store" method="POST">
                                     @csrf
                                     <input type="hidden" name="session_id" value="{{$current_school_session_id}}">
                                     <div>
@@ -76,8 +76,8 @@
 <script>
     $(document).ready(function(){
         $('#inputAssignToClass').change(function(){
-            var classId = $(this).val(); 
-            var url = '{{ route("get.sections.courses.by.classId", "classId") }}'; 
+            var classId = $(this).val();
+            var url = '{{ route("get.sections.courses.by.classId", "classId") }}';
             url = url.replace('classId', classId);
             $.ajax({
                 url:url ,
@@ -86,7 +86,7 @@
                 success: function (response) {
                     if(response.sections){
                         var sectionsDropdown = $('#section-select');
-                        sectionsDropdown.empty(); 
+                        sectionsDropdown.empty();
                         sectionsDropdown.append($('<option>').text('Please select a section').attr('value', 0))
                         response.sections.forEach(function(section) {
                             sectionsDropdown.append($('<option>').text(section.section_name).attr('value', section.id));
@@ -94,14 +94,14 @@
                     }
                     if(response.courses){
                         var sectionsDropdown = $('#course-select');
-                        sectionsDropdown.empty(); 
+                        sectionsDropdown.empty();
                         sectionsDropdown.append($('<option>').text('Please select a course').attr('value', 0))
                         response.courses.forEach(function(section) {
                             sectionsDropdown.append($('<option>').text(section.course_name).attr('value', section.id));
                         });
                     }
                 }
-            })            
+            })
         })
     });
 </script>

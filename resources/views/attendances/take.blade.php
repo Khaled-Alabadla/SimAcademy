@@ -14,26 +14,26 @@
                     @include('session-messages')
 
                     <h3><i class="bi bi-compass"></i>
-                        Class #{{request()->query('class_name')}}, 
+                        Class #{{request()->query('class_name,
                         @if ($academic_setting->attendance_type == 'course')
-                            Course: {{request()->query('course_name')}}
+                            Course: {{request()->query('course_name
                         @else
-                            Section #{{request()->query('section_name')}}
+                            Section #{{request()->query('section_name
                         @endif
                     </h3>
                     <div class="mt-4">Current Date and Time: {{ date('Y-m-d H:i:s') }}</div>
                     <div class="row mt-4">
                         <div class="col-10 bg-white border p-3 shadow-sm">
-                            <form action="{{route('attendances.store')}}" method="POST">
+                            <form action="{{route('attendances.store" method="POST">
                                 @csrf
                                 <input type="hidden" name="session_id" value="{{$current_school_session_id}}">
-                                <input type="hidden" name="class_id" value="{{request()->query('class_id')}}">
+                                <input type="hidden" name="class_id" value="{{request()->query('class_id">
                                 @if ($academic_setting->attendance_type == 'course')
-                                    <input type="hidden" name="course_id" value="{{request()->query('course_id')}}">
+                                    <input type="hidden" name="course_id" value="{{request()->query('course_id">
                                     <input type="hidden" name="section_id" value="0">
                                 @else
                                     <input type="hidden" name="course_id" value="0">
-                                    <input type="hidden" name="section_id" value="{{request()->query('section_id')}}">
+                                    <input type="hidden" name="section_id" value="{{request()->query('section_id">
                                 @endif
                                 <table class="table">
                                     <thead>

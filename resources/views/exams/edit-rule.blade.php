@@ -10,7 +10,7 @@
                     <h1 class="display-6 mb-3"><i class="bi bi-file-plus"></i> Edit Exam Rule</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{route('dashboard">Home</a></li>
                             <li class="breadcrumb-item"><a href="{{url()->previous()}}">Exams Rules</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Edit Exam Rule</li>
                         </ol>
@@ -19,7 +19,7 @@
                     <div class="row">
                         <div class="col-5 mb-4">
                             <div class="p-3 border bg-light shadow-sm">
-                                <form action="{{route('exam.rule.update')}}" method="POST">
+                                <form action="{{route('exam.rule.update" method="POST">
                                     @csrf
                                     <input type="hidden" name="exam_rule_id" value="{{$exam_rule_id}}">
                                     <div class="mt-2">

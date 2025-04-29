@@ -12,7 +12,7 @@
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{route('home">Home</a></li>
                             <li class="breadcrumb-item"><a href="{{url()->previous()}}">My Courses</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Create Assignment</li>
                         </ol>
@@ -22,13 +22,13 @@
                     <div class="row mt-4">
                         <div class="col-5">
                             <div class="p-3 border bg-light shadow-sm">
-                                <form action="{{route('assignment.store')}}" method="POST"  enctype="multipart/form-data">
+                                <form action="{{route('assignment.store" method="POST"  enctype="multipart/form-data">
                                     @csrf
                                     <input type="hidden" name="session_id" value="{{$current_school_session_id}}">
-                                    <input type="hidden" name="class_id" value="{{request()->query('class_id')}}">
-                                    <input type="hidden" name="semester_id" value="{{request()->query('semester_id')}}">
-                                    <input type="hidden" name="course_id" value="{{request()->query('course_id')}}">
-                                    <input type="hidden" name="section_id" value="{{request()->query('section_id')}}">
+                                    <input type="hidden" name="class_id" value="{{request()->query('class_id">
+                                    <input type="hidden" name="semester_id" value="{{request()->query('semester_id">
+                                    <input type="hidden" name="course_id" value="{{request()->query('course_id">
+                                    <input type="hidden" name="section_id" value="{{request()->query('section_id">
                                     <div class="mb-3">
                                         <label for="assignment-name" class="form-label">Assignment Name</label>
                                         <input type="text" class="form-control" id="assignment-name" name="assignment_name" placeholder="Assignment Name" required>

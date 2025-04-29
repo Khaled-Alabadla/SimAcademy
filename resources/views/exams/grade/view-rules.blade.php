@@ -34,7 +34,7 @@
                                         <td>{{$gradeRule->end_at}}</td>
                                         <td>
                                             <div class="btn-group" role="group">
-                                                <a href="{{route('exam.grade.system.rule.delete')}}" role="button" class="btn btn-sm btn-primary" onclick="event.preventDefault();
+                                                <a href="{{route('exam.grade.system.rule.delete" role="button" class="btn btn-sm btn-primary" onclick="event.preventDefault();
                                                      document.getElementById('delete-form-{{$gradeRule->id}}').submit();"><i class="bi bi-trash2"></i> Delete</a>
                                                 <form id="delete-form-{{$gradeRule->id}}" action="{{ route('exam.grade.system.rule.delete') }}" method="POST" class="d-none">
                                                     @csrf

@@ -12,13 +12,13 @@
                     </h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{route('dashboard">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Exam</li>
                         </ol>
                     </nav>
                     <h6>Filter list by:</h6>
                     <div class="mb-4 mt-4">
-                        <form action="{{route('exam.list')}}" method="GET">
+                        <form action="{{route('exam.list" method="GET">
                             <div class="row">
                                 <div class="col-3">
                                     <select class="form-select" aria-label="Class" name="class_id">
@@ -69,7 +69,7 @@
                                                     <a href="{{route('exam.rule.create', ['exam_id' => $exam->id])}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-plus"></i> Add Rule</a>
                                                     <a href="{{route('exam.rule.list', ['exam_id' => $exam->id])}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-eye"></i> View Rule</a>
                                                     {{-- <a href="{{route('exam.edit', ['exam_id' => $exam->id])}}" role="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-pen"></i> Edit</a> --}}
-                                                    {{-- <a href="{{route('exam.delete')}}" role="button" class="btn btn-sm btn-primary" onclick="event.preventDefault();
+                                                    {{-- <a href="{{route('exam.delete" role="button" class="btn btn-sm btn-primary" onclick="event.preventDefault();
                                                         document.getElementById('exam-delete-form-{{$exam->id}}').submit();"><i class="bi bi-trash2"></i> Delete</a>
                                                     <form id="exam-delete-form-{{$exam->id}}" action="{{ route('exam.delete') }}" method="POST" class="d-none">
                                                         @csrf

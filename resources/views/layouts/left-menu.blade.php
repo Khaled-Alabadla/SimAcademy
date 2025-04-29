@@ -8,7 +8,7 @@
             </li>
             {{-- @if (Auth::user()->role == 'teacher')
                     <li class="nav-item">
-                        <a type="button" href="{{url('attendances')}}" class="d-flex nav-link {{ request()->is('attendances*')? 'active' : '' }}"><i class="bi bi-calendar2-week"></i> <span class="ms-2 d-inline d-sm-none d-md-none d-xl-inline">Attendance</span></a>
+                        <a type="button" href="{{url('attendances" class="d-flex nav-link {{ request()->is('attendances*')? 'active' : '' }}"><i class="bi bi-calendar2-week"></i> <span class="ms-2 d-inline d-sm-none d-md-none d-xl-inline">Attendance</span></a>
                     </li>
                     @endif --}}
             {{-- @can('view classes') --}}
@@ -157,8 +157,8 @@
                             <i class="ms-auto d-inline d-sm-none d-md-none d-xl-inline bi bi-chevron-down"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="{{url('marks/view')}}">View Marks</a></li>
-                            <li><a class="dropdown-item" href="{{url('marks/results')}}">View Results</a></li>
+                            <li><a class="dropdown-item" href="{{url('marks/view">View Marks</a></li>
+                            <li><a class="dropdown-item" href="{{url('marks/results">View Results</a></li>
                         </ul>
                     </li> --}}
             @endif

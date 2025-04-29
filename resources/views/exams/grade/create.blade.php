@@ -12,7 +12,7 @@
                     <div class="row">
                         <div class="col-md-5 mb-4">
                             <div class="p-3 border shadow-sm bg-light">
-                                <form action="{{route('exam.grade.system.store')}}" method="POST">
+                                <form action="{{route('exam.grade.system.store" method="POST">
                                     @csrf
                                     <input type="hidden" name="session_id" value="{{$current_school_session_id}}">
                                     <div>

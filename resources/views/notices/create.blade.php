@@ -10,13 +10,13 @@
                     <h1 class="display-6 mb-3"><i class="bi bi-megaphone"></i> Create Notice</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{route('dashboard">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Create Notice</li>
                         </ol>
                     </nav>
                     @include('session-messages')
                     <div class="row">
-                        <form action="{{route('notice.store')}}" method="POST">
+                        <form action="{{route('notice.store" method="POST">
                             @csrf
                             <input type="hidden" name="session_id" value="{{$current_school_session_id}}">
                             @include('components.ckeditor.editor', ['name' => 'notice'])
