@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SimAcademy</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/login_styles.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="/assets/css/all.min.css'" />
+    <link rel="stylesheet" href="/assets/css/login_styles.css" />
+    <link rel="stylesheet" href="/public/assets/css/bootstrap.min.css/" />
     {{-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> --}}
 
 </head>
