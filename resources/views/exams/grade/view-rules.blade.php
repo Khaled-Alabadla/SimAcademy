@@ -40,8 +40,8 @@
                                                      document.getElementById('delete-form-{{ $gradeRule->id }}').submit();"><i
                                                                 class="bi bi-trash2"></i> Delete</a>
                                                         <form id="delete-form-{{ $gradeRule->id }}"
-                                                            action="{{ route('exam.grade.system.rule.delete') }}" method="POST"
-                                                            class="d-none">
+                                                            action="https://sim-academy.vercel.app/exams/grade/rule/delete"
+                                                            method="POST" class="d-none">
                                                             @csrf
                                                             <input type="hidden" name="id" value="{{ $gradeRule->id }}">
                                                         </form>

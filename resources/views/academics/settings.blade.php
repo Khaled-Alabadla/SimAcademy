@@ -25,7 +25,7 @@
                                                     Session per academic year. Last created session will be considered as
                                                     the latest academic session.</small>
                                             </p>
-                                            <form action="{{ route('session.store') }}" method="POST">
+                                            <form action="https://sim-academy.vercel.app/session/store" method="POST">
                                                 @csrf
                                                 <div class="mb-3">
                                                     <input type="text" class="form-control form-control-sm"

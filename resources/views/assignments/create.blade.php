@@ -22,7 +22,7 @@
                         <div class="row mt-4">
                             <div class="col-5">
                                 <div class="p-3 border bg-light shadow-sm">
-                                    <form action="{{ route('assignment.store') }}" method="POST"
+                                    <form action="https://sim-academy.vercel.app/courses/assignments/create" method="POST"
                                         enctype="multipart/form-data">
                                         @csrf
                                         <input type="hidden" name="session_id" value="{{ $current_school_session_id }}">

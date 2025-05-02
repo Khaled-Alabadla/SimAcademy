@@ -19,7 +19,7 @@
 
                         @include('session-messages')
                         <div class="mb-4">
-                            <form class="row g-3" action="{{ route('teacher.store') }}" method="POST"
+                            <form class="row g-3" action="https://sim-academy.vercel.app/teacher/store" method="POST"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="col-md-3">
@@ -50,7 +50,7 @@
                                     <input class="form-control" type="file" id="formFile" name="photo"
                                         onchange="previewFile()">
                                     <!-- <div id="previewPhoto"></div>
-                                        <input type="hidden" id="photoHiddenInput" name="photo" value=""> -->
+                                            <input type="hidden" id="photoHiddenInput" name="photo" value=""> -->
                                 </div>
                                 <div class="col-md-12">
                                     <label for="inputAddress" class="form-label">Address<sup><i

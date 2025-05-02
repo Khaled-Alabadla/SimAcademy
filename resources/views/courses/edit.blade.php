@@ -17,7 +17,7 @@
                         </nav>
                         @include('session-messages')
                         <div class="row">
-                            <form class="col-6" action="{{ route('course.update') }}" method="POST">
+                            <form class="col-6" action="https://sim-academy.vercel.app/course/update" method="POST">
                                 @csrf
                                 <input type="hidden" name="session_id" value="{{ $current_school_session_id }}">
                                 <input type="hidden" name="course_id" value="{{ $course_id }}">
@@ -34,10 +34,10 @@
                                         </option>
                                         <option value="General" {{ $course->course_type == 'General' ? 'selected' : '' }}>
                                             General</option>
-                                        <option value="Elective"
-                                            {{ $course->course_type == 'Elective' ? 'selected' : '' }}>Elective</option>
-                                        <option value="Optional"
-                                            {{ $course->course_type == 'Optional' ? 'selected' : '' }}>Optional</option>
+                                        <option value="Elective" {{ $course->course_type == 'Elective' ? 'selected' : '' }}>
+                                            Elective</option>
+                                        <option value="Optional" {{ $course->course_type == 'Optional' ? 'selected' : '' }}>
+                                            Optional</option>
                                     </select>
                                 </div>
                                 <button type="submit" class="btn btn-outline-primary"><i class="bi bi-check2"></i>

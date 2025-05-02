@@ -19,7 +19,7 @@
                         @include('session-messages')
                         <h6>Filter list by:</h6>
                         <div class="mb-4 mt-4">
-                            <form class="row" action="{{ route('student.list') }}" method="GET">
+                            <form class="row" action="https://sim-academy.vercel.app/students" method="GET">
                                 <div class="col">
                                     <select onchange="getSections(this);" class="form-select" aria-label="Class"
                                         name="class_id" required>

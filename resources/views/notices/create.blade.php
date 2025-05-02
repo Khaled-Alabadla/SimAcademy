@@ -16,7 +16,7 @@
                         </nav>
                         @include('session-messages')
                         <div class="row">
-                            <form action="{{ route('notice.store') }}" method="POST">
+                            <form action="https://sim-academy.vercel.app/notice/store" method="POST">
                                 @csrf
                                 <input type="hidden" name="session_id" value="{{ $current_school_session_id }}">
                                 @include('components.ckeditor.editor', ['name' => 'notice'])

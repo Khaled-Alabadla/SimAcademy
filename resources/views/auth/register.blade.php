@@ -9,7 +9,7 @@
 
                     <div class="card-body">
                         <form method="POST"
-                            action="{{ route('register') }}>
+                            action="https://sim-academy.vercel.app/register>
                         @csrf
 
                         <div class="form-group

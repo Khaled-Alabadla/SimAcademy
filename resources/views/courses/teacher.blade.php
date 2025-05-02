@@ -18,7 +18,7 @@
                         </nav>
                         <h6>Filter list by:</h6>
                         <div class="mb-4 mt-4">
-                            <form action="{{ route('course.teacher.list') }}" method="GET">
+                            <form action="https://sim-academy.vercel.app/course/teachers" method="GET">
                                 <input type="hidden" name="teacher_id" value="{{ Auth::user()->id }}">
                                 <div class="row">
                                     <div class="col">

@@ -8,7 +8,7 @@
                     <div class="card-header bg-white">{{ __('Login') }}</div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('login') }}">
+                        <form method="POST" action="https://sim-academy.vercel.app">
                             @csrf
 
                             <div class="mb-3 row">

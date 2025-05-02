@@ -16,7 +16,8 @@
                         </nav>
                         @include('session-messages')
                         <div class="p-3 border bg-light shadow-sm">
-                            <form action="{{ route('syllabus.store') }}" method="POST" enctype="multipart/form-data">
+                            <form action="https://sim-academy.vercel.app/syllabus/store" method="POST"
+                                enctype="multipart/form-data">
                                 @csrf
                                 <input type="hidden" name="session_id" value="{{ $current_school_session_id }}">
                                 <div class="mb-3">

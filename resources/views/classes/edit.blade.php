@@ -17,7 +17,7 @@
                         </nav>
                         @include('session-messages')
                         <div class="row">
-                            <form class="col-6" action="{{ route('class.update') }}" method="POST">
+                            <form class="col-6" action="https://sim-academy.vercel.app/class/update" method="POST">
                                 @csrf
                                 <input type="hidden" name="session_id" value="{{ $current_school_session_id }}">
                                 <input type="hidden" name="class_id" value="{{ $class_id }}">

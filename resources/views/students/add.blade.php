@@ -24,7 +24,7 @@
                                 and "Section" before adding student</small>
                         </p>
                         <div class="mb-4">
-                            <form class="row g-3" action="{{ route('student.store') }}" method="POST"
+                            <form class="row g-3" action="https://sim-academy.vercel.app/student/store" method="POST"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="row g-3">

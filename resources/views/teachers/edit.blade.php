@@ -21,7 +21,7 @@
                         @include('session-messages')
 
                         <div class="mb-4">
-                            <form class="row g-3" action="{{ route('teacher.update') }}" method="POST">
+                            <form class="row g-3" action="https://sim-academy.vercel.app/teacher/update" method="POST">
                                 @csrf
                                 <input type="hidden" name="teacher_id" value="{{ $teacher->id }}">
                                 <div class="col-3">
@@ -77,7 +77,8 @@
                                     <select id="inputState" class="form-select" name="gender" required>
                                         <option value="Male" {{ $teacher->gender == 'Male' ? 'selected' : null }}>Male
                                         </option>
-                                        <option value="Female" {{ $teacher->gender == 'Female' ? 'selected' : null }}>Female
+                                        <option value="Female" {{ $teacher->gender == 'Female' ? 'selected' : null }}>
+                                            Female
                                         </option>
                                     </select>
                                 </div>

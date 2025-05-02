@@ -19,7 +19,7 @@
                         <div class="row">
                             <div class="col-5 mb-4">
                                 <div class="p-3 border bg-light shadow-sm">
-                                    <form action="{{ route('exam.rule.update') }}" method="POST">
+                                    <form action="https://sim-academy.vercel.app/exams/rules/update" method="POST">
                                         @csrf
                                         <input type="hidden" name="exam_rule_id" value="{{ $exam_rule_id }}">
                                         <div class="mt-2">

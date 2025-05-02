@@ -18,7 +18,7 @@
                         </nav>
                         <h6>Filter list by:</h6>
                         <div class="mb-4 mt-4">
-                            <form action="{{ route('exam.list') }}" method="GET">
+                            <form action="https://sim-academy.vercel.app/exams" method="GET">
                                 <div class="row">
                                     <div class="col-3">
                                         <select class="form-select" aria-label="Class" name="class_id">

@@ -19,7 +19,7 @@
                         <div class="row">
                             <div class="col-5 mb-4">
                                 <div class="p-3 border bg-light shadow-sm">
-                                    <form action="{{ route('exam.rule.store') }}" method="POST">
+                                    <form action="https://sim-academy.vercel.app/exams/roles/store" method="POST">
                                         @csrf
                                         <input type="hidden" name="exam_id" value="{{ $exam_id }}">
                                         <input type="hidden" name="session_id" value="{{ $current_school_session_id }}">
