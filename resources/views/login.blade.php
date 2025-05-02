@@ -18,13 +18,13 @@
         <div class="form-section">
             <h1 class="welcome-text">Welcome to SimAcademy</h1>
 
-            <form class="login-form" method="POST" action="{{ route('login.process') }}">
+            <form class="login-form" method="POST" action="https://sim-academy.vercel.app/login">
                 @csrf
                 <div class="form-group">
                     <label for="email">Email</label>
                     <div class="field-container">
                         <input class="@error('email') is-invalid @enderror" type="email" id="email" name="email"
-                            placeholder="example@gmail.com" required />
+                            autocomplete="email" placeholder="example@gmail.com" required />
                     </div>
                     @error('email')
                         <small class="text-danger">{{ $message }}</small>
@@ -35,7 +35,7 @@
                     <label for="password">Password</label>
                     <div class="field-container">
                         <input type="password" class="@error('email') is-invalid @enderror" id="password"
-                            name="password" placeholder="••••••••" required />
+                            autocomplete="password" name="password" placeholder="••••••••" required />
                     </div>
                     @error('password')
                         <small class="text-danger">{{ $message }}</small>
