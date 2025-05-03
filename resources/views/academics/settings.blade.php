@@ -70,7 +70,7 @@
                                             <h6>Create Semester for Current Session</h6>
                                             <form action="https://sim-academy.vercel.app/semester/store" method="POST">
                                                 @csrf
-                                                <input type="hidden" name="session_id" autocomplete=
+                                                <input type="hidden" name="session_id"
                                                     value="{{ $current_school_session_id }}">
                                                 <div class="mt-2">
                                                     <p>Semester name<sup><i class="bi bi-asterisk text-primary"></i></sup>
