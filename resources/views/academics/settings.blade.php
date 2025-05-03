@@ -29,7 +29,7 @@
                                                 @csrf
                                                 <div class="mb-3">
                                                     <input type="text" class="form-control form-control-sm"
-                                                        placeholder="2021 - 2022" aria-label="Current Session"
+                                                        placeholder="2021 - 2022" autocomplete="session_name" aria-label="Current Session"
                                                         name="session_name" required>
                                                 </div>
                                                 <button class="btn btn-sm btn-outline-primary" type="submit"><i
@@ -45,7 +45,7 @@
                                             <small><i class="bi bi-exclamation-diamond-fill me-2"></i> Only use this when
                                                 you want to browse data from previous Sessions.</small>
                                         </p>
-                                        <form action="{{ route('session.browse') }}" method="POST">
+                                        <form action="https://sim-academy.vercel.app/session/browse" method="POST">
                                             @csrf
                                             <div class="mb-3">
                                                 <p class="mt-2">Select "Session" to browse by:</p>
@@ -68,9 +68,9 @@
                                     <div class="col-md-4 mb-4">
                                         <div class="p-3 border bg-light shadow-sm">
                                             <h6>Create Semester for Current Session</h6>
-                                            <form action="{{ route('semester.store') }}" method="POST">
+                                            <form action="https://sim-academy.vercel.app/semester/store" method="POST">
                                                 @csrf
-                                                <input type="hidden" name="session_id"
+                                                <input type="hidden" name="session_id" autocomplete=
                                                     value="{{ $current_school_session_id }}">
                                                 <div class="mt-2">
                                                     <p>Semester name<sup><i class="bi bi-asterisk text-primary"></i></sup>
@@ -96,14 +96,14 @@
                                             </form>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 mb-4">
+                                    {{-- <div class="col-md-4 mb-4">
                                         <div class="p-3 border bg-light shadow-sm">
                                             <h6>Attendance Type</h6>
                                             <p class="text-danger">
                                                 <small><i class="bi bi-exclamation-diamond-fill me-2"></i> Do not change the
                                                     type in the middle of a Semester.</small>
                                             </p>
-                                            <form action="{{ route('attatndence.update') }} " method="POST">
+                                            <form action="https://sim-academy.vercel.app/attendence/update" method="POST">
                                                 @csrf
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="radio" name="attendance_type"
@@ -124,11 +124,11 @@
                                                         class="bi bi-check2"></i> Save</button>
                                             </form>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <div class="col-md-4 mb-4">
                                         <div class="p-3 border bg-light shadow-sm">
                                             <h6>Create Class</h6>
-                                            <form action="{{ route('class.store') }}" method="POST">
+                                            <form action="https://sim-academy.vercel.app/class/store" method="POST">
                                                 @csrf
                                                 <input type="hidden" name="session_id"
                                                     value="{{ $current_school_session_id }}">
@@ -145,7 +145,7 @@
                                     <div class="col-md-4 mb-4">
                                         <div class="p-3 border bg-light shadow-sm">
                                             <h6>Create Section</h6>
-                                            <form action="{{ route('section.store') }}" method="POST">
+                                            <form action="https://sim-academy.vercel.app/section/store" method="POST">
                                                 @csrf
                                                 <input type="hidden" name="session_id"
                                                     value="{{ $current_school_session_id }}">
@@ -177,7 +177,7 @@
                                     <div class="col-md-4 mb-4">
                                         <div class="p-3 border bg-light shadow-sm">
                                             <h6>Create Course</h6>
-                                            <form action="{{ route('course.store') }} " method="POST">
+                                            <form action="https://sim-academy.vercel.app/course/store" method="POST">
                                                 @csrf
                                                 <input type="hidden" name="session_id"
                                                     value="{{ $current_school_session_id }}">
@@ -231,7 +231,7 @@
                                     <div class="col-md-4 mb-4">
                                         <div class="p-3 border bg-light shadow-sm">
                                             <h6>Assign Teacher</h6>
-                                            <form action="{{ route('teacher.assign') }}" method="POST">
+                                            <form action="https://sim-academy.vercel.app/teacher/assign" method="POST">
                                                 @csrf
                                                 <input type="hidden" name="session_id"
                                                     value="{{ $current_school_session_id }}">
@@ -312,7 +312,7 @@
                                     <div class="col-md-4 mb-4">
                                         <div class="p-3 border bg-light shadow-sm">
                                             <h6>Allow Final Marks Submission</h6>
-                                            <form action="{{ route('final.marks.submission.status.update') }}"
+                                            <form action="https://sim-academy.vercel.app/final-marks-submission-status/update"
                                                 method="POST">
                                                 @csrf
                                                 <p class="text-danger">

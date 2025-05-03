@@ -88,10 +88,10 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('password.edit') }}">
+                                    <a class="dropdown-item" href="https://sim-academy.vercel.app/change-password">
                                         <i class="bi bi-key me-2"></i> Change Password
                                     </a>
-                                    <a class="dropdown-item" href="{{ route('logout') }}">
+                                    <a class="dropdown-item" href="https://sim-academy.vercel.app/logout">
                                         <i class="bi bi-door-open me-2"></i>Logout
                                     </a>
                                 </div>

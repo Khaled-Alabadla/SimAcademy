@@ -17,7 +17,7 @@
                                 Current Session.</small>
                         </p>
                         <div class="mb-4 mt-4">
-                            <form action="{{ route('promotions.store') }}" method="POST">
+                            <form action="https://sim-academy.vercel.app/promotions/promote" method="POST">
                                 @csrf
                                 <table class="table mt-4">
                                     <thead>
