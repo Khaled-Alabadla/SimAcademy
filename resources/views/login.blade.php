@@ -58,7 +58,8 @@
         </div>
 
         <div class="illustration-section">
-            <img src="/assets/img/login.png" alt="صورة توضيحية" class="illustration-image" />
+            <img src="https://thumbs.wbm.im/pw/medium/8a46facfe24274b645e37963ca1d8e87.jpg" alt="صورة توضيحية"
+                class="illustration-image" />
         </div>
     </div>
     <script src="/assets/js/bootstrap.min.js"></script>

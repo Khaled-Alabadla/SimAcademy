@@ -1,5 +1,5 @@
 * {
-    font-family: 'Tajawal', sans-serif;
+    font-family: "Tajawal", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -92,7 +92,7 @@ body {
 
 .or-divider::before,
 .or-divider::after {
-    content: '';
+    content: "";
     flex: 1;
     border-bottom: 1px solid #ccc;
     margin: 0 10px;
@@ -227,8 +227,8 @@ body {
 }
 
 .illustration-image {
-    max-width: 80%;
-    height: auto;
+    max-width: fit-content;
+    height: 350px;
     object-fit: contain;
     border-radius: 15px;
     box-shadow: 0 0 100px #6b63ff8e;
