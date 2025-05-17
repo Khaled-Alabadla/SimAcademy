@@ -16,6 +16,15 @@
 <body>
     <div class="container">
         <div class="form-section">
+            @if (@errors->any())
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>
+                            <small>{{ $error }}</small>
+                        </li>
+                    @endforeach
+                </ul>
+            @endif
             <h1 class="welcome-text">Welcome to SimAcademy</h1>
 
             <form class="login-form" method="POST" action="https://sim-academy.vercel.app/login">
