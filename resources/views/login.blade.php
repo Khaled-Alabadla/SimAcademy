@@ -16,7 +16,7 @@
 <body>
     <div class="container">
         <div class="form-section">
-            @if (@errors->any())
+            @if ($errors->any())
                 <ul>
                     @foreach ($errors->all() as $error)
                         <li>
