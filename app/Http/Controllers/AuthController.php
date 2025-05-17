@@ -22,8 +22,8 @@ class AuthController extends Controller
     {
         try {
             $validate = Validator::make($request->all(), [
-                'email' => ['required', 'email'],
-                'password' => ['required']
+                // 'email' => ['required', 'email'],
+                // 'password' => ['required']
             ]);
             if ($validate->passes()) {
                 if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
