@@ -25,18 +25,22 @@ class AuthController extends Controller
                 'email' => ['required', 'email'],
                 'password' => ['required']
             ]);
-            if ($validate->passes()) {
-                if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-                    return '1';
-                }
+
+            if ($validate->fails()) {
+                return response()->json(['errors' => $validate->errors()], 422);
             }
-            //     return '2';
-            // }
-            // return '3';
+
+            if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+                return '1';  // Login success
+            } else {
+                return '2';  // Login failed (wrong credentials)
+            }
         } catch (\Exception $e) {
-            return '4';
+            // Return the actual error message for debugging
+            return response()->json(['error' => $e->getMessage()], 500);
         }
     }
+
     public function updatePasword()
     {
         return view('auth.passwords.edit');
