@@ -37,7 +37,7 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return redirect()->route('dashboard')->with('success', 'Login successful');
+        return view('dashboard');
     }
 
     public function updatePasword()
