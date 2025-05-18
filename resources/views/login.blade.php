@@ -27,7 +27,7 @@
             @endif
             <h1 class="welcome-text">Welcome to SimAcademy</h1>
 
-            <form class="login-form" method="POST" action="https://sim-academy.vercel.app/login">
+            <form class="login-form" method="POST" action="{{ route('login.process') }}">
                 @csrf
                 <div class="form-group">
                     <label for="email">Email</label>
