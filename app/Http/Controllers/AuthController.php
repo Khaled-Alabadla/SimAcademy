@@ -20,26 +20,15 @@ class AuthController extends Controller
     }
     public function process(Request $request)
     {
-        try {
-            $validate = Validator::make($request->all(), [
-                'email' => ['required', 'email'],
-                'password' => ['required']
-            ]);
-
-            if ($validate->fails()) {
-                return response()->json(['errors' => $validate->errors()], 422);
-            }
-
-            if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-                return redirect('https://sim-academy.vercel.app/home');  // Login success
-            } else {
-                return response()->json(
-                    ['errors' => $validate->errors()]
-                );
-            }
-        } catch (\Exception $e) {
-            // Return the actual error message for debugging
-            return response()->json(['error' => $e->getMessage()], 500);
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|min:5'
+        ]);
+        $credentials = $request->only('email', 'password');
+        if (Auth::attempt($credentials)) {
+            return redirect()->route('dashboard');
+        } else {
+            return redirect()->back()->with('error', 'Invalid email or password');
         }
     }
 
