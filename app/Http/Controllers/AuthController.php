@@ -22,15 +22,22 @@ class AuthController extends Controller
     {
         $request->validate([
             'email' => 'required|email',
-            'password' => 'required|min:5'
+            'password' => 'required|min:8',
         ]);
-        $credentials = $request->only('email', 'password');
-        if (Auth::attempt($credentials)) {
-            Auth::login($user);
-            return redirect()->route('dashboard');
-        } else {
-            return redirect()->back()->with('error', 'Invalid email or password');
+
+        $user = User::where('email', $request->email)->first();
+
+        if (!$user) {
+            return back()->withErrors(['email' => 'email not found'])->withInput();
         }
+
+        if (!Hash::check($request->password, $user->password)) {
+            return back()->withErrors(['password' => 'password not correct'])->withInput();
+        }
+
+        Auth::login($user);
+
+        return redirect()->route('dashboard')->with('success', 'Login successful');
     }
 
     public function updatePasword()
