@@ -27,7 +27,7 @@ use App\Http\Controllers\UserController;
 
 
 
-Route::group(['middlware' => 'guest'], function () {
+Route::group(['middlware' => ['guest', 'web']], function () {
     Route::get('/', [AuthController::class, 'login'])->name('login');
     Route::post('/login', [AuthController::class, 'process'])->name('login.process');
 });
