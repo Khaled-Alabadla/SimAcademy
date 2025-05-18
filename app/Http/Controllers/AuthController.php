@@ -37,7 +37,7 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return view('dashboard');
+        return route('dashboard');
     }
 
     public function updatePasword()
