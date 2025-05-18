@@ -27,13 +27,13 @@ class AuthController extends Controller
             ]);
             if ($validate->passes()) {
                 if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-                    return redirect()->route('dashboard');
+                    return '1';
                 }
-                return redirect()->back()->with('error', ' Either Email or Password is wrong');
+                return '2';
             }
-            return redirect()->back()->withErrors($validate);
+            return '3';
         } catch (\Exception $e) {
-            return redirect()->back()->with('error', $e->getMessage());
+            return '4';
         }
     }
     public function updatePasword()
