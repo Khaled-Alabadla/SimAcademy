@@ -31,9 +31,11 @@ class AuthController extends Controller
             }
 
             if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-                return '1';  // Login success
+                return redirect()->route('dashboard');  // Login success
             } else {
-                return '2';  // Login failed (wrong credentials)
+                return response()->json(
+                    ['errors' => $validate->errors()]
+                ); // Login failed (wrong credentials)
             }
         } catch (\Exception $e) {
             // Return the actual error message for debugging
