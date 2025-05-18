@@ -25,13 +25,13 @@ class AuthController extends Controller
                 'email' => ['required', 'email'],
                 'password' => ['required']
             ]);
-            if ($validate->passes()) {
-                if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-                    return '1';
-                }
-                return '2';
-            }
-            return '3';
+            // if ($validate->passes()) {
+            //     if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+            //         return '1';
+            //     }
+            //     return '2';
+            // }
+            // return '3';
         } catch (\Exception $e) {
             return '4';
         }
