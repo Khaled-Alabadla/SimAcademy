@@ -50,8 +50,7 @@ You can try the system using the following demo credentials:
 
 - **Backend:** Laravel (PHP Framework)
 - **Database:** MySQL
-- **Frontend:** Blade templates, HTML, CSS (responsive design)
-- **Authentication:** Secure login system for administrators
+- **Frontend:** Blade templates, Bootstrap
 
 ---
 
